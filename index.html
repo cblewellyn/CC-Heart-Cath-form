@@ -44,7 +44,7 @@ CC Heart Catherization Form
 
 <tr><td>Procedure to be performed: <input type="text" id="procedure" name="procedure" value=""></td></tr>
 
-<tr><td>Where is the procedure being done:<textarea id="location" name="location" value="" rows="3" cols="45">
+<tr><td>Where is the procedure being done:<br><textarea id="location" name="location" value="" rows="3" cols="45">
 	</textarea>
 	<br>Cleveland Clinic Martin North Hospital<br>
     	<button onclick="Copytext6()">Select</button>
@@ -233,7 +233,7 @@ function Fill_out() {
   let currentDate = `${month}/${day}/${year}`;
 
   var timeproc = document.getElementById("proctime").value;
-  document.getElementById("paraproc").innerHTML = ("<b>" + patproc + "</b><br>" + "Arrive at<br>" + procloca + " on <b>" + currentDate + "</b> at " + "<b>" + timeproc + "</b>");
+  document.getElementById("paraproc").innerHTML = ("<b>" + patproc + "</b><br>" + "<p>" + "Arrive at<br>" + procloca + " on <br><b>" + currentDate + "</b> at " + "<b>" + timeproc + "</b>");
 
 	var y = document.getElementById("medform");
     var medtext2 = "...from your procedure date:";
@@ -373,3 +373,4 @@ function printDiv(divName) {
 
 </body>
 </html>
+
