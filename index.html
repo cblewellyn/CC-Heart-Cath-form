@@ -207,6 +207,34 @@ function Copytext7() {
 <p id="demo"></p>
 <p id="paraproc"></p>
 <p id="medrec"></p>
+
+<p id="day_of_surgery"><hr><h2>Day of Procedure</h2>
+<br>- Do NOT eat or drink anything after midnight before procedure
+<br>- DO take any of your regular medications the morning of procedure unless advised otherwise.
+<br>- Your family will be shown to the waiting room and will receive periodic updates.
+<br>- The physician will talk with you or your family after the procedure.
+<h3><p id="hospital_info"></p></h3>
+
+<!--
+You can do a placeholder
+<input type="tel" id="phone" name="phone" placeholder="1234567890" pattern="[0-9]{3}[0-9]{3}[0-9]{4}">.
+-->
+
+<br></p>
+<p id="addition_questions"><hr>
+<table style= "width:100%">
+                <tr><th colspan="2"><h2>Call the office if... <div id="officenumber"></div></h2>
+                                </th></tr>
+                <tr><td>-any questions regarding procedure</td>
+                <td>-you develop an infection that requires antibiotics of any kind</td></tr>
+                <tr><td>-there is any change in your condition</td>
+                    <td>-you develop a fever, cold, or flu symptoms</td>
+        </tr>
+    <tr>
+                <td>-are prescribed new medications</td>
+        <td></td>
+        </tr>
+                </table>
 </div>
 <input type="button" onclick="printDiv('printableArea')" value="Print Report" />
 
@@ -220,6 +248,7 @@ function Fill_out() {
   var patfname = document.getElementById("fname").value;
   document.getElementById("demo").innerHTML = ("<b>" + patfname + " " + patlname + "</b>" + " is scheduled for:" + "<br>");
 
+  var phonenum = document.getElementById("phoneno").value;
   var patproc = document.getElementById("procedure").value;
   var procloca = document.getElementById("location").value;
   var dateproc = document.getElementById("procdate").value;
@@ -355,7 +384,7 @@ function Fill_out() {
 textform2 = textform2 + y.elements[j].value;
 		}
     }
-document.getElementById("medrec").innerHTML = "<br>" + textform2 + medtext2 + "<b>" + currentDate + "</b>";
+document.getElementById("medrec").innerHTML = "<br>" + textform2 + medtext2 + "<b>" + currentDate + "</b>" + "<br>" + "<br>" + "If you have any questions, call the office at " + "<b>" + phonenum + "</b>";
 }
 
 function printDiv(divName) {
@@ -373,4 +402,3 @@ function printDiv(divName) {
 
 </body>
 </html>
-
